@@ -1,6 +1,7 @@
 // console.log('TAILWIND CONFIG IS LOADED')
 export default {
   content: ['./src/**/*.{html,js,ts,jsx,tsx}'],
+  darkMode: 'class',
   theme: {
     screens: {
       sm: '640px',
@@ -16,7 +17,17 @@ export default {
         220: 'var(--spacing-220)',
         230: 'var(--spacing-230)',
       },
+      backgroundImage: theme => ({
+        'logo-dark-mode': "url('../images/logo-dark-mode.png')",
+        'logo-light-mode': "url('../images/logo-light-mode.png')",
+        'curvy-dark-mode': "url('../images/bg-curvy-dark-mode.png')",
+        'curvy-light-mode': "url('../images/bg-curvy-light-mode.png')",
+      }),
+    },
+  },
+  variants: {
+    extend: {
+      backgroundImage: ['ala-bala'],
     },
   },
 }
-
